@@ -72,7 +72,7 @@ function Header({apiKey, apiPrefixURL, enableCrackleVideo, enableYoutubeVideo, m
             
             <div className={toggleHeaderInfo? "headerUnderlay fade-in" : "headerUnderlay"} onDoubleClick={()=>setToggleHeaderInfo(false)}>
                 <div className="movie-details">
-                <img className="headerImage" src={(movie.backdrop_path === null || movie.backdrop_path === undefined) ? broken_path : `${poster_prefixURL}${movie.poster_path}`} alt={movie.title}></img>
+                    <img className="headerImage" src={(movie.backdrop_path === null || movie.backdrop_path === undefined) ? broken_path : `${poster_prefixURL}${movie.poster_path}`} alt={movie.title}></img>
                     <h1>{movie.title} 
                         <span style={{fontSize:"22px"}}> ({movie.length !== 0 && movie !== undefined && movie !== null? movie.release_date.slice(0,4) : null })</span>
                         <div className="languageContainer">
